@@ -14,8 +14,22 @@ Title:
 
 GLObal Building heights for Urban Studies (UT-GLOBUS) for city- and street- scale urban simulations: Development and first applications
 
-- The paper is mainly about the DEVELOPMENT and APPLICATIONS of UT-GLOBUS.
+- The paper is mainly about the DEVELOPMENT and first APPLICATIONS of UT-GLOBUS.
 - It's published in Nature, Scientific Data on August 15, 2024.
+
+## Contents
+
+This presentation on UT-GLOBUS will cover:
+
+- **What is UT-GLOBUS?**
+    - Introduction
+- **How to develop UT-GLOBUS?**
+    - Data acquisition and processing
+    - Methods
+    - Validation
+- **Why use UT-GLOBUS?**
+    - First Applications
+
 
 
 
