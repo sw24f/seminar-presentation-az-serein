@@ -1,6 +1,6 @@
 ---
-title: "Creating Presentations with Quarto"
-subtitle: "Introduction to Data Science | Fall 2024"
+title: "UT-GLOBUS"
+subtitle: "A Global Building Heights Dataset for Urban Studies"
 format:
     revealjs:
         slide-number: true
@@ -8,10 +8,22 @@ format:
         theme: default
 ---
 
-## About Revealjs
+## Overview 
 
-- A format used by Quarto to create presentations
-- Renders slides as an HTML file by default
+Title:
+
+GLObal Building heights for Urban Studies (UT-GLOBUS) for city- and street- scale urban simulations: Development and first applications
+
+- The paper is mainly about the DEVELOPMENT and APPLICATIONS of UT-GLOBUS.
+- It's published in Nature, Scientific Data on August 15, 2024.
+
+
+
+
+## What is UT-GLOBUS?
+
+- University of Texas - GLObal Building heights for Urban Studies (UT-GLOBUS).
+- UT-GLOBUS is a DATASET!
 - Highly recommended over alternatives, such as `beamer` or `pptx`, due to its capabilities
 
 # Creating Slides
