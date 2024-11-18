@@ -58,14 +58,17 @@ University of Texas - GLObal Building heights for Urban Studies (UT-GLOBUS).
 
 ## Random Forest Regression
 
-Random Forest Regression is a specific use of the Random Forest algorithm to predict continuous numeric values.
-
 - **Key Attributes:**
-    - Ground Truth:  LiDAR-based nDSM building height used as the target variable for training.
-    - Spaceborne AGL Height:  WSF 3-D adjusted spaceborne nDSM assigned to each building footprint, providing primary height information.
-    - Population Density: Average population density assigned to each building footprint polygon to capture nearby population.
-    - Polygon Area: Spatial extent of each building footprint, calculated as an attribute.
+    - Ground Truth:  LiDAR-based nDSM building height used as the target variable.
+    - Spaceborne AGL Height: Spaceborne nDSM from WSF 3-D assigned to building footprints.
+    - Population Density: Average population density, used to capture population number.
+    - Polygon Area: Spatial extent of each building footprint.
 
+## Training Details
+
+- **Dataset:** 268,000 buildings from 6 US cities (NYC, Philadelphia, Boston, LA, SF).
+- **Training Split:** 80% for training, 20% for validation.
+- **Hyperparameter Tuning:** 240 estimators, max depth = 50, min samples to split = 12, 3-fold cross-validation. Bootstrap sampling enabled, features per split = sqrt(total features).
 
 
 
