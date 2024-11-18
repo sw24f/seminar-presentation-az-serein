@@ -37,7 +37,7 @@ This presentation on UT-GLOBUS will cover:
 University of Texas - GLObal Building heights for Urban Studies (UT-GLOBUS).
 
 - **Introduction to UT-GLOBUS:**
-    - UT-GLOBUS combines **spaceborne elevation**, **population density** and **polygon area** with **machine-learning techniques** to estimate building-level information.
+    - UT-GLOBUS combines **Tabular data**(spaceborne elevation, population density and polygon area) and **LiDAR** with **Random Forest Regression** to estimate building-level information.
 
     - UT-GLOBUS is a dataset developed to provide detailed **Building Heights** and **Urban Canopy Parameters (UCPs)** for over 1,200 cities around the world.
 
@@ -47,95 +47,33 @@ University of Texas - GLObal Building heights for Urban Studies (UT-GLOBUS).
 ## Data Acquisition and Processing
 
 - **Urban Block Datasets:** Acquired diverse building sizes (high, mid, low-rise) for model generalization.
-- **LiDAR Data:** Used USGS 3DEP point cloud to derive building heights and generate nDSM by subtracting DEM from DSM.
-- **Spaceborne Elevation Data:** Combined ALOS DSM, ICESat-2, GEDI, and WSF 3-D datasets to address spatial gaps and urban sprawl.
-- **Population Density:** Incorporated Landscan 2020 data, showing correlation between population density and building Heights.
-- **2-D Building Footprints:** Utilized OSM, Google, and Microsoft footprints, with deep learning for areas lacking coverage.
+- **LiDAR Data:** Light Detection and Ranging.
+- **Spaceborne Elevation Data:** Combined ICESat-2, GEDI, ALOS DSM and WSF 3-D datasets to address spatial gaps and urban sprawl.
+- **Population Density:** High correlation between population density and building Heights.
+- **2-D Building Footprints:** Utilized OSM, Google and Microsoft footprints, with deep learning for areas lacking coverage.
+
+## Development Process
+
+![A picture of the Development of UT-GLOBUS](Development.png)
+
+## Random Forest Regression
+
+Random Forest Regression is a specific use of the Random Forest algorithm to predict continuous numeric values.
+
+- **Key Attributes:**
+    - Ground Truth:  LiDAR-based nDSM building height used as the target variable for training.
+    - Spaceborne AGL Height:  WSF 3-D adjusted spaceborne nDSM assigned to each building footprint, providing primary height information.
+    - Population Density: Average population density assigned to each building footprint polygon to capture nearby population.
+    - Polygon Area: Spatial extent of each building footprint, calculated as an attribute.
 
 
-## Revealjs Options
 
-- `slide-number`: display the slide number on each slide
-- `preview-links`: open links in an overlay on the slide
-- `theme`: configure the presentation theme
-- `incremental`: items in lists appear individually
-- `footer`: include a footer at the bottom of each slide
 
-Many other options can be used under `revealjs` to customize a presentation.
 
-## YAML Example
 
-``` yaml
----
-title: "Creating Presentations with Quarto"
-subtitle: "Introduction to Data Science | Fall 2024"
-format:
-    revealjs:
-        slide-number: true
-        preview-links: true
-        theme: default
----
-```
 
-This is a verbatim copy of the YAML code used in the Quarto file for this presentation!
 
-## Subsequent Slides
 
-- To create a section slide, use a single `#` followed by the slide's title.
-- To create a regular slide, use a double `##` followed by the slide's title. Then, use markdown syntax to add content to the slide after the title line.
-
-The title slide **does not** need to be added in this way; it is created and included automatically based on the information in the YAML code block!
-
-## Slides Example
-
-``` markdown
----
-title: "Example Presentation"
-date: today
-author: "NAME"
-format: revealjs
----
-
-# Section Title
-
-## List A
-
-- Bullet Point 1A
-- Bullet Point 2A
-
-## List B
-
-- Bullet Point 1B
-- Bullet Point 2B
-```
-
-# Slide Content
-
-## Code Blocks
-
-- It may be useful to display blocks of code in a slide.
-- Open a code block with at least three ```` ``` ```` followed by the language of the code.
-- Close a code block with the same number of ```` ``` ```` as in the opening.
-
-## Code Block Example
-
-For example, the following code *in the Quarto document*
-
-```` markdown
-``` python
-import numpy as np
-np.arange(10)
-```
-````
-
-will yield the following output *in the rendered slide*.
-
-``` python
-import numpy as np
-np.arange(10)
-```
-
-Notice that this does not run the Python code; it simply displays the block of code in the slide.
 
 ## Executable Code
 
