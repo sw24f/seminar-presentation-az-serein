@@ -15,7 +15,7 @@ Title:
 GLObal Building heights for Urban Studies (UT-GLOBUS) for city- and street- scale urban simulations: Development and first applications
 
 - The paper is mainly about the DEVELOPMENT and first APPLICATIONS of UT-GLOBUS.
-- It's published in Nature, Scientific Data on August 15, 2024.
+- It's published in **Nature**, **Scientific Data** on August 15, 2024.
 
 ## Contents
 
@@ -30,8 +30,9 @@ This presentation on UT-GLOBUS will cover:
 - **Why use UT-GLOBUS?**
     - First Applications
 
+# What is UT-GLOBUS?
 
-## What is UT-GLOBUS?
+## UT-GLOBUS
 
 University of Texas - GLObal Building heights for Urban Studies (UT-GLOBUS).
 
@@ -41,23 +42,16 @@ University of Texas - GLObal Building heights for Urban Studies (UT-GLOBUS).
     - UT-GLOBUS is a dataset developed to provide detailed **Building Heights** and **Urban Canopy Parameters (UCPs)** for over 1,200 cities around the world.
 
 
-# Creating Slides
+# How to develop UT-GLOBUS
 
-## Title Slide Configuration
+## Data Acquisition and Processing
 
-All specifications for a title slide are included in the Quarto document's YAML code.
+- **Urban Block Datasets:** Acquired diverse building sizes (high, mid, low-rise) for model generalization.
+- **LiDAR Data:** Used USGS 3DEP point cloud to derive building heights and generate nDSM by subtracting DEM from DSM.
+- **Spaceborne Elevation Data:** Combined ALOS DSM, ICESat-2, GEDI, and WSF 3-D datasets to address spatial gaps and urban sprawl.
+- **Population Density:** Incorporated Landscan 2020 data, showing correlation between population density and building Heights.
+- **2-D Building Footprints:** Utilized OSM, Google, and Microsoft footprints, with deep learning for areas lacking coverage.
 
-A simple example:
-
-``` yaml
----
-title: "Creating Presentations with Quarto"
-subtitle: "Introduction to Data Science | Fall 2024"
-format: revealjs
----
-```
-
-Specifications for *date* and *author* can also be added.
 
 ## Revealjs Options
 
