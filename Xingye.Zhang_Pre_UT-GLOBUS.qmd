@@ -109,15 +109,15 @@ University of Texas - GLObal Building heights for Urban Studies (UT-GLOBUS).
 
 ## Refrences
 
-- [UT-GLOBUS](https://www.nature.com/articles/s41597-024-03719-w)
+- [GLObal Building heights for Urban Studies (UT-GLOBUS) for city- and street- scale urban simulations: Development and first applications](https://www.nature.com/articles/s41597-024-03719-w)
 
 ## Visualization 
 
 - **QGIS:**
-    - 
+    - Mapping and Visualization: Create and edit maps with multiple layers.
+    - Geospatial Analysis: Perform spatial analysis and processing tasks.
 
-
-
-
+- **Python:**
+    - Geopandas: Extends Pandas to handle geospatial data, enabling easy manipulation, analysis, and visualization of geographic datasets.
 
 # Thank You!
