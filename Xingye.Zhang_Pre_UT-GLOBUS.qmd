@@ -31,14 +31,15 @@ This presentation on UT-GLOBUS will cover:
     - First Applications
 
 
-
-
-
 ## What is UT-GLOBUS?
 
-- University of Texas - GLObal Building heights for Urban Studies (UT-GLOBUS).
-- UT-GLOBUS is a DATASET!
-- Highly recommended over alternatives, such as `beamer` or `pptx`, due to its capabilities
+University of Texas - GLObal Building heights for Urban Studies (UT-GLOBUS).
+
+- **Introduction to UT-GLOBUS:**
+    - UT-GLOBUS combines **spaceborne elevation**, **population density** and **polygon area** with **machine-learning techniques** to estimate building-level information.
+
+    - UT-GLOBUS is a dataset developed to provide detailed **Building Heights** and **Urban Canopy Parameters (UCPs)** for over 1,200 cities around the world.
+
 
 # Creating Slides
 
