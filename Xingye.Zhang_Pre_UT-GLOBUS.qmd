@@ -54,7 +54,7 @@ University of Texas - GLObal Building heights for Urban Studies (UT-GLOBUS).
 
 ## Development Process
 
-![A picture of the Development of UT-GLOBUS](Development.png)
+![A picture of the Development of UT-GLOBUS](Development.jpeg)
 
 ## Random Forest Regression
 
@@ -70,6 +70,9 @@ University of Texas - GLObal Building heights for Urban Studies (UT-GLOBUS).
 - **Training Split:** 80% for training, 20% for validation.
 - **Hyperparameter Tuning:** 240 estimators, max depth = 50, min samples to split = 12, 3-fold cross-validation. Bootstrap sampling enabled, features per split = sqrt(total features).
 
+## Validation Output (Building Heights)
+
+![Validation Output 1(Building Heights)](Validation_Building_Heights.jpeg)
 
 
 
