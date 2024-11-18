@@ -70,11 +70,37 @@ University of Texas - GLObal Building heights for Urban Studies (UT-GLOBUS).
 - **Training Split:** 80% for training, 20% for validation.
 - **Hyperparameter Tuning:** 240 estimators, max depth = 50, min samples to split = 12, 3-fold cross-validation. Bootstrap sampling enabled, features per split = sqrt(total features).
 
-## Validation Output (Building Heights)
+## Validation Output 1(Building Heights)
 
 ![Validation Output 1(Building Heights)](Validation_Building_Heights.jpeg)
 
+## Validation 1 Summary
 
+- **Model Performance:**
+    - Validation dataset: R² = 0.76, RMSE = 5.4 meters, indicating good fit but with some underestimation (MBE = -0.06m).
+    - Testing dataset: R² = 0.69, RMSE = 9.1 meters, showing reduced accuracy with a slight overestimation (MBE = 0.10m).
+
+- **Resicual Analysis:**
+    - Errors increase for taller buildings (especially above 30 meters), with higher variation in predictions.
+
+## Validation Output 2(UCPs)
+
+![Validation Output 1(Building Heights)](Validation_Output_UCPs.jpeg)
+
+## Validation Output 2 Summary
+
+# Why use UT-GLOBUS?
+
+## First Applications
+
+- **City-Scale:**
+    - Land Surface Temperature (LST) Simulation
+    - Air Temperature (T2M) Simulation
+    - Quantification of the efficiency of heat migration stratigies
+    - AC energy consumption and Photovoltaic(PV) energy generation simulation
+
+- **Street-Scale:** 
+    - Human thermal comfort simulation with UT-GLOBUS
 
 
 
