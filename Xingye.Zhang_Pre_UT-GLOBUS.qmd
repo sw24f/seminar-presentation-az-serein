@@ -1,0 +1,123 @@
+---
+title: "UT-GLOBUS"
+subtitle: "A Global Building Heights Dataset for Urban Studies"
+format:
+    revealjs:
+        slide-number: true
+        preview-links: true
+        theme: default
+---
+
+## Overview 
+
+Title:
+
+GLObal Building heights for Urban Studies (UT-GLOBUS) for city- and street- scale urban simulations: Development and first applications
+
+- The paper is mainly about the DEVELOPMENT and first APPLICATIONS of UT-GLOBUS.
+- It's published in **Nature**, **Scientific Data** on August 15, 2024.
+
+## Contents
+
+This presentation on UT-GLOBUS will cover:
+
+- **What is UT-GLOBUS?**
+    - Introduction
+- **How to develop UT-GLOBUS?**
+    - Data acquisition and processing
+    - Methods
+    - Validation
+- **Where to use UT-GLOBUS?**
+    - First Applications
+
+# What is UT-GLOBUS?
+
+## UT-GLOBUS
+
+University of Texas - GLObal Building heights for Urban Studies (UT-GLOBUS).
+
+- **Introduction to UT-GLOBUS:**
+    - UT-GLOBUS combines **Tabular data**(spaceborne elevation, population density and polygon area) and **LiDAR** with **Random Forest Regression** to estimate building-level information.
+
+    - UT-GLOBUS is a dataset developed to provide detailed **Building Heights** and **Urban Canopy Parameters (UCPs)** for over 1,200 cities around the world.
+
+
+# How to develop UT-GLOBUS
+
+## Data Acquisition and Processing
+
+- **Urban Block Datasets:** Acquired diverse building sizes (high, mid, low-rise) for model generalization.
+- **LiDAR Data:** Light Detection and Ranging.
+- **Spaceborne Elevation Data:** Combined ICESat-2, GEDI, ALOS DSM and WSF 3-D datasets to address spatial gaps and urban sprawl.
+- **Population Density:** High correlation between population density and building Heights.
+- **2-D Building Footprints:** Utilized OSM, Google and Microsoft footprints, with deep learning for areas lacking coverage.
+
+## Development Process
+
+![A picture of the Development of UT-GLOBUS](Development.jpeg)
+
+## Random Forest Regression
+
+- **Key Attributes:**
+    - Ground Truth:  LiDAR-based nDSM building height used as the target variable.
+    - Spaceborne AGL Height: Spaceborne nDSM from WSF 3-D assigned to building footprints.
+    - Population Density: Average population density, used to capture population number.
+    - Polygon Area: Spatial extent of each building footprint.
+
+## Training Details
+
+- **Dataset:** 268,000 buildings from 6 US cities (NYC, Philadelphia, Boston, LA, SF).
+- **Training Split:** 80% for training, 20% for validation.
+- **Hyperparameter Tuning:** 240 estimators, max depth = 50, min samples to split = 12, 3-fold cross-validation. Bootstrap sampling enabled, features per split = sqrt(total features).
+
+## Validation Output 1(Building Heights)
+
+![Validation Output 1(Building Heights)](Validation_Building_Heights.jpeg)
+
+## Validation 1 Summary
+
+- **Model Performance:**
+    - Validation dataset: R² = 0.76, RMSE = 5.4 meters, indicating good fit but with some underestimation (MBE = -0.06m).
+    - Testing dataset: R² = 0.69, RMSE = 9.1 meters, showing reduced accuracy with a slight overestimation (MBE = 0.10m).
+
+- **Resicual Analysis:**
+    - Errors increase for taller buildings (especially above 30 meters), with higher variation in predictions.
+
+## Validation Output 2(UCPs)
+
+![Validation Output 1(Building Heights)](Validation_Output_UCPs.jpeg)
+
+## Validation Output 2 Summary
+
+- **UCPs Validation Output Comparison:**
+    - UT-GLOBUS : Achieved a high R² of 0.84, showing strong alignment with LiDAR heights.
+    - Li et al. (2020): Had a lower R² of 0.41, highlighting less accuracy compared to UT-GLOBUS.
+
+
+# Where to use UT-GLOBUS?
+
+## First Applications
+
+- **City-Scale:**
+    - Land Surface Temperature (LST) Simulation
+    - Air Temperature (T2M) Simulation
+    - Quantification of the efficiency of heat migration stratigies
+    - AC energy consumption and Photovoltaic(PV) energy generation simulation
+
+- **Street-Scale:** 
+    - Human thermal comfort simulation with UT-GLOBUS
+
+## Refrences
+
+- [GLObal Building heights for Urban Studies (UT-GLOBUS) for city- and street- scale urban simulations: Development and first applications](https://www.nature.com/articles/s41597-024-03719-w)
+
+## Visualization 
+
+- **QGIS:**
+    - Mapping and Visualization: Create and edit maps with multiple layers.
+    - Geospatial Analysis: Perform spatial analysis and processing tasks.
+
+- **Python:**
+    - Geopandas: Extends Pandas to handle geospatial data, enabling easy manipulation, analysis, and visualization of geographic datasets.
+
+# Thank You!
